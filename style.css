@@ -1,0 +1,9 @@
+/* Header background color */
+#header nav{
+  background-color:#013fba;
+}
+
+/* Header logo */
+#header img{
+  height: 50px;
+}
