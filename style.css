@@ -7,3 +7,17 @@
 #header img{
   height: 50px;
 }
+
+#myCarousel img{
+  object-fit: cover;
+}
+
+#myCarousel .carousel-caption{
+  background-color: rgba(0, 0, 0, 0.05);
+  text-shadow: 0 0 2px #000000;
+}
+
+/* Main */
+#articles img{
+  object-fit: cover;
+}
