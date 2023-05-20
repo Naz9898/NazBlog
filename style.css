@@ -1,3 +1,4 @@
+/* HEADER */
 /* Header background color */
 #header nav{
   background-color:#013fba;
@@ -5,19 +6,44 @@
 
 /* Header logo */
 #header img{
-  height: 50px;
+  height: 30px;
 }
 
+#navbarCollapse a{
+  border-bottom: 2px solid #013fba;
+}
+
+#navbarCollapse a:hover{
+  color: white;
+  border-bottom: 2px solid white;
+}
+/* CAROUSEL */
+/* Avoid stretching images */
 #myCarousel img{
   object-fit: cover;
 }
 
+/* Give black shadow to text and slightly darken background for better readability*/
 #myCarousel .carousel-caption{
   background-color: rgba(0, 0, 0, 0.05);
   text-shadow: 0 0 2px #000000;
 }
 
-/* Main */
+/* ARTICLES */
 #articles img{
   object-fit: cover;
 }
+
+.card{
+  transition: all 0.5s ease-in-out;
+}
+@media (hover: hover) {
+  .card:hover{
+    background-color: #013fba;
+    color: white;
+    transform: scale(1.1);
+    z-index: 10;
+  }
+}
+
+
