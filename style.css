@@ -17,6 +17,18 @@
   color: white;
   border-bottom: 2px solid white;
 }
+
+#searchBox button{
+  left: -100px;
+  border-radius: 100%;
+  border:none;
+  background-color: #013fba;
+
+}
+
+/* #searchBox button:hover{
+  background-color: #36a0e6;
+}  */
 /* CAROUSEL */
 /* Avoid stretching images */
 #myCarousel img{
@@ -46,4 +58,12 @@
   }
 }
 
+/* Footer */
+footer {
+  background-color: #32a2e3;
+  color: white;
+}
 
+.svg-color {
+  fill: white;
+}
