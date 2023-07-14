@@ -36,4 +36,5 @@ function runQueries(db) {
         });
     });
 }
+
 createDatabase();

@@ -1,8 +1,69 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* HEADER */
+/* Header background color */
+#header nav{
+  background-color:#013fba;
 }
 
-a {
-  color: #00B7FF;
+/* Header logo */
+#header img{
+  height: 30px;
+}
+
+#navbarCollapse a{
+  border-bottom: 2px solid #013fba;
+}
+
+#navbarCollapse a:hover{
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+#searchBox button{
+  left: -100px;
+  border-radius: 100%;
+  border:none;
+  background-color: #013fba;
+
+}
+
+/* #searchBox button:hover{
+  background-color: #36a0e6;
+}  */
+/* CAROUSEL */
+/* Avoid stretching images */
+#myCarousel img{
+  object-fit: cover;
+}
+
+/* Give black shadow to text and slightly darken background for better readability*/
+#myCarousel .carousel-caption{
+  background-color: rgba(0, 0, 0, 0.05);
+  text-shadow: 0 0 2px #000000;
+}
+
+/* ARTICLES */
+#articles img{
+  object-fit: cover;
+}
+
+.card{
+  transition: all 0.5s ease-in-out;
+}
+@media (hover: hover) {
+  .card:hover{
+    background-color: #013fba;
+    color: white;
+    transform: scale(1.1);
+    z-index: 10;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #32a2e3;
+  color: white;
+}
+
+.svg-color {
+  fill: white;
 }
