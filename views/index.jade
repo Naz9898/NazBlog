@@ -1,4 +1,55 @@
 extends layout
+
+mixin article(articleId, caption)
+  .col
+    .card.shadow-sm
+      img(src='images/articles/3/0.jpg', alt='News Image', width='100%', height='225')
+      .card-body
+        h5.card-title Oshi no Ko
+        p.card-text
+          | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+        .d-flex.justify-content-between.align-items-center
+          small.text-body-secondary 9 mins
+
 block content
-  h1= title
-  p Welcome to #{title}
+  // CAROUSEL
+  #myCarousel.carousel.slide(data-bs-ride='carousel')
+    .carousel-indicators
+      button.active(type='button', data-bs-target='#myCarousel', data-bs-slide-to='0', aria-current='true', aria-label='Slide 1')
+      button(type='button', data-bs-target='#myCarousel', data-bs-slide-to='1', aria-label='Slide 2')
+      button(type='button', data-bs-target='#myCarousel', data-bs-slide-to='2', aria-label='Slide 3')
+    .carousel-inner
+      .carousel-item.active
+        img.d-block.w-100(src='images/articles/0/0.jpg', alt='News Image', width='100%', height='100%')
+        .container
+          .carousel-caption
+            h1 Example headline.
+            p Some representative placeholder content for the first slide of the carousel.
+      .carousel-item
+            // <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+            img.d-block.w-100(src='images/articles/1/0.jpg', alt='News Image', width='100%', height='100%')
+            .container
+              .carousel-caption
+                h1 Another example headline.
+                p Some representative placeholder content for the second slide of the carousel.
+                // <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+      .carousel-item
+        img.d-block.w-100(src='images/articles/2/0.jpg', alt='News Image', width='100%', height='100%')
+        .container
+          .carousel-caption
+            h1 One more for good measure.
+            p Some representative placeholder content for the third slide of this carousel.
+            // <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+    button.carousel-control-prev(type='button', data-bs-target='#myCarousel', data-bs-slide='prev')
+      span.carousel-control-prev-icon(aria-hidden='true')
+      span.visually-hidden Previous
+    button.carousel-control-next(type='button', data-bs-target='#myCarousel', data-bs-slide='next')
+      span.carousel-control-next-icon(aria-hidden='true')
+      span.visually-hidden Next
+  // ARTICLES
+  #articles.album.py-5.bg-body-tertiary
+      .container
+        .row.row-cols-1.row-cols-sm-2.row-cols-md-3.g-3
+          - for (var i=0; i<9; i++) {
+            +article(3, "Some stuff")
+          - }
