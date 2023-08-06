@@ -6,8 +6,9 @@ function createDatabase() {
             console.log("Getting error " + err);
             exit(1);
         }
-         createTables(newdb); 
+        createTables(newdb); 
     });
+    return newdb;
 }
 
 function createTables(newdb) {
@@ -20,21 +21,27 @@ function createTables(newdb) {
     );
 
 
-    insert into article (id, title, content, date)
-        values (1, 'Oshi No Ko', 'Long article...', '1 min'),
-               (2, 'Suzume', 'Long article...', '2 min'),
-               (3, 'Shingeki NO kyojin', 'Long article...', '3 min');
+    insert into article (id, title, content)
+        values (1, 'Oshi No Ko', 'Long article...'),
+               (2, 'Suzume', 'Long article...'),
+               (3, 'Shingeki NO kyojin', 'Long article...');
         `, ()  => {
-            runQueries(newdb);
+        runQueries();
     });
 }
 
-function runQueries(db) {
+/* function runQueries() {
+    var db = new sqlite3.Database('blog.db');
+
     db.all(`select * from article`, (err, rows) => {
         rows.forEach(row => {
-            console.log(row.id + "\t" + row.title + "\t" + row.content + "\t" + row.date);
+            res += row.id + "\t" + row.title + "\t" + row.content + "\n";
         });
+        console.log(res);
     });
-}
+    return res;
+} */
 
-createDatabase();
+//module.exports = { runQueries }
+
+db = createDatabase();

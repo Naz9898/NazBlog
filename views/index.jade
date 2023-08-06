@@ -1,5 +1,6 @@
 extends layout
 
+
 mixin article(articleId, caption)
   .col
     .card.shadow-sm
@@ -12,6 +13,7 @@ mixin article(articleId, caption)
           small.text-body-secondary 9 mins
 
 block content
+  - console.log( "In Jade " + articles )
   // CAROUSEL
   #myCarousel.carousel.slide(data-bs-ride='carousel')
     .carousel-indicators
