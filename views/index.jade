@@ -1,12 +1,12 @@
 extends layout
 
 
-mixin article(articleId, caption)
+mixin article(articleId, title)
   .col
     .card.shadow-sm
-      img(src='images/articles/3/0.jpg', alt='News Image', width='100%', height='225')
+      img(src='images/articles/#{articleId}/0.jpg', alt='News Image', width='100%', height='225')
       .card-body
-        h5.card-title Oshi no Ko
+        h5.card-title #{title}
         p.card-text
           | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
         .d-flex.justify-content-between.align-items-center
@@ -53,5 +53,5 @@ block content
       .container
         .row.row-cols-1.row-cols-sm-2.row-cols-md-3.g-3
           - for (var i=0; i<9; i++) {
-            +article(3, "Some stuff")
+            +article(articles[i].id, articles[i].title)
           - }
