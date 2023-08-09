@@ -3,14 +3,15 @@ extends layout
 
 mixin article(articleId, title)
   .col
-    .card.shadow-sm
-      img(src='images/articles/#{articleId}/0.jpg', alt='News Image', width='100%', height='225')
-      .card-body
-        h5.card-title #{title}
-        p.card-text
-          | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-        .d-flex.justify-content-between.align-items-center
-          small.text-body-secondary 9 mins
+    a.link-unstyled(href="/article")
+      .card.shadow-sm
+        img(src='images/articles/#{articleId}/0.jpg', alt='News Image', width='100%', height='225')
+        .card-body
+          h5.card-title #{title}
+          p.card-text
+            | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+          .d-flex.justify-content-between.align-items-center
+            small.text-body-secondary 9 mins
 
 block content
   - console.log( "In Jade " + articles )
