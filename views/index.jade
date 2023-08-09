@@ -3,7 +3,7 @@ extends layout
 
 mixin article(articleId, title)
   .col
-    a.link-unstyled(href="/article")
+    a.link-unstyled(href="/article?id=#{articleId}")
       .card.shadow-sm
         img(src='images/articles/#{articleId}/0.jpg', alt='News Image', width='100%', height='225')
         .card-body
