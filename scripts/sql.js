@@ -55,7 +55,7 @@ function populateTables(newdb) {
         insert into article (id, title)
         values  (0, 'Final Fantasy XVI'),
                 (1, 'The legend of Zelda: Tears of the Kingdom'),
-                (2, 'Slam Dunk'),
+                (2, 'THE FIRST SLAM DUNK'),
                 (3, 'Asus ROG Ally'),
                 (4, 'Pacific League MVP 2023'),
                 (5, 'Pixel 7A'),

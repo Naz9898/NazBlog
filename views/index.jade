@@ -9,7 +9,7 @@ mixin article(articleId, title)
         .card-body
           h5.card-title #{title}
           p.card-text
-            | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+            | You can use this section to provide a brief overview of the article. This content is a little bit longer than the title.
           .d-flex.justify-content-between.align-items-center
             small.text-body-secondary 9 mins
 
@@ -22,27 +22,28 @@ block content
       button(type='button', data-bs-target='#myCarousel', data-bs-slide-to='1', aria-label='Slide 2')
       button(type='button', data-bs-target='#myCarousel', data-bs-slide-to='2', aria-label='Slide 3')
     .carousel-inner
-      .carousel-item.active
-        img.d-block.w-100(src='images/articles/0/0.jpg', alt='News Image', width='100%', height='100%')
-        .container
-          .carousel-caption
-            h1 Example headline.
-            p Some representative placeholder content for the first slide of the carousel.
-      .carousel-item
-            // <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-            img.d-block.w-100(src='images/articles/1/0.jpg', alt='News Image', width='100%', height='100%')
-            .container
-              .carousel-caption
-                h1 Another example headline.
-                p Some representative placeholder content for the second slide of the carousel.
-                // <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-      .carousel-item
-        img.d-block.w-100(src='images/articles/2/0.jpg', alt='News Image', width='100%', height='100%')
-        .container
-          .carousel-caption
-            h1 One more for good measure.
-            p Some representative placeholder content for the third slide of this carousel.
-            // <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+      a.link-unstyled(href="/article?id=0")
+        .carousel-item.active
+          img.d-block.w-100(src='images/articles/0/0.jpg', alt='News Image', width='100%', height='100%')
+          .container
+            .carousel-caption
+              h1 Final Fantasy XVI
+              p The sixteenth episode of the storic series from Square Enix is finally out
+      a.link-unstyled(href="/article?id=1")      
+        .carousel-item
+              img.d-block.w-100(src='images/articles/1/0.jpg', alt='News Image', width='100%', height='100%')
+              .container
+                .carousel-caption
+                  h1 The Legend of Zelda - Tears of the Kingdom
+                  p We can finally play the sequel of the 2017 Game of the Year
+      a.link-unstyled(href="/article?id=2")
+        .carousel-item
+          img.d-block.w-100(src='images/articles/2/0.jpg', alt='News Image', width='100%', height='100%')
+          .container
+            .carousel-caption
+              h1 THE FIRST SLAM DUNK
+              p After a couple of decades the ending of Slam Dunk is finally animated
+              // <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
     button.carousel-control-prev(type='button', data-bs-target='#myCarousel', data-bs-slide='prev')
       span.carousel-control-prev-icon(aria-hidden='true')
       span.visually-hidden Previous
