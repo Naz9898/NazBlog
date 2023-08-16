@@ -1,5 +1,5 @@
 View the website:
-[a link](https://nazblog-deploy.onrender.com/)
+[link](https://nazblog-deploy.onrender.com/)
 
 To run:
 install dependencies:
