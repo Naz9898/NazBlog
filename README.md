@@ -1,4 +1,4 @@
-View the website:
+View the website (may take a while the first time you open): 
 [link](https://nazblog-deploy.onrender.com/)
 
 To run:
